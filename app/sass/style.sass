@@ -7,6 +7,8 @@
     max-width: 480px
     width: 100%
     margin: 0 auto
+    padding: 5px 15px
+    box-sizing: border-box
 
 .clearfix::after
   content: ""
@@ -19,14 +21,14 @@ body
 
 header
   border-bottom: 2px solid $header-border
+  margin-bottom: 5px
   .topline
     display: -webkit-flex
     display: -ms-flex
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     align-items: center
     img
-      padding: 5px
       width: 60px
       height: auto
     .notifications
@@ -37,17 +39,19 @@ header
           color: $notification-green
         &:nth-child(2)
           color: $notification-gray
-          text-decoration: underline
         &:last-child
           color: $notification-red
           margin-right: 0
+        &.active-number
+          text-decoration: underline
     .buttons
       display: -webkit-flex
       display: -ms-flex
+      display: flex
       button
-        width: 32px
-        height: 32px
-        margin-right: 12px
+        width: 30px
+        height: 30px
+        margin-right: 10px
         font-size: 0
         background-color: transparent
         background-size: contain
@@ -60,7 +64,7 @@ header
           background-size: contain
       .toggle-menu
         margin: 7px 0 0 5px
-        width: 28px
+        width: 26px
         height: 16px
         span
           position: relative
@@ -81,22 +85,90 @@ header
           &:after
             transform: rotate(45deg)
 
-        // background: url("../img/burger.png") no-repeat center
-        // background-size: contain
+
+main
+  .search
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 5px
+  .search-form
+    font-size: 0
+    label
+      line-height: 20px
+      position: relative
+      font-size: 14px
+      color: #b3b0b0
+    input
+      position: relative
+      vertical-align: top
+      box-sizing: border-box
+      max-width: 180px
+      padding: 4px 40px 4px 5px
+      line-height: 16px
+      border: 1px solid #b3b0b0
+      border-radius: 4px
+    button
+      position: relative
+      vertical-align: top
+      width: 33px
+      height: 26px
+      margin-left: -9px
+      border: 1px solid #b3b0b0
+      border-radius: 4px
+      background: #fff url("../img/search-button.png") no-repeat center
+      font-size: 0
+  .sort
+    align-self: flex-end
+    margin-bottom: 5px
+    span
+      margin-right: 5px
+      font-size: 14px
+      color: #b2aeae
+      &.active-sort
+        color: #7f7d7d
+      &:last-child
+        margin-right: 0
+
+.words-list
+  .item
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 20px
+    .word
+      max-width: 210px
+      .eng
+        position: relative
+        padding-right: 25px
+        font-size: 18px
+        color: #4c4c4c
+        &::after
+          position: absolute
+          right: 2px
+          top: 0
+          content: ""
+          display: block
+          width: 20px
+          height: 20px
+          background: transparent url("../img/sound.png") no-repeat center
+          background-size: contain
 
 
 
-  // .topline
-  //   padding: 8px 10px
-  //   a
-  //     float: left
-  //     img
-  //       width: 70px
-  //       height: auto
-  //   .notifications
-  //     width: 25%
-  //     margin: 0 auto
-  //     span
-  //       line-height: 100%
-  //   .buttons
-  //     float: right
+      p
+        margin-bottom: 5px
+        font-size: 15px
+        color: #777777
+      .translation
+        font-size: 15px
+        color: #c8c1c1
+    .image
+      width: 90px
+      height: 90px
+      background: url("../img/onion.jpg") no-repeat center
+      background-size: cover

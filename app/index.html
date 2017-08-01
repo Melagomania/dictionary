@@ -12,7 +12,7 @@
       <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
       <div class="notifications">
         <span>104</span>
-        <span>241</span>
+        <span class="active-number">241</span>
         <span>136</span>
       </div>
       <div class="buttons">
@@ -27,7 +27,37 @@
   </header>
 
   <main>
-
+    <div class="search content">
+      <form action="POST" class="search-form">
+        <label for="enter-word">
+          Enter the word or #tag:<br/>
+        </label>
+        <input type="text" name="word" id="enter-word">
+        <button type="submit">Find</button>
+      </form>
+      <div class="sort">
+        <span class="active-sort">name:</span>
+        <span>date</span>
+      </div>
+    </div>
+    <section class="words-list content">
+      <div class="item">
+        <div class="word">
+          <span class="eng">Shame</span>
+          <p>Define shame: a feeling of guilt, regret or sadness that you</p>
+          <span class="translation">Стыд</span>
+        </div>
+        <div class="image"></div>
+      </div>
+      <div class="item">
+        <div class="word">
+          <span class="eng">Shame</span>
+          <p>Define shame: a feeling of guilt, regret or sadness that you</p>
+          <span class="translation">Стыд</span>
+        </div>
+        <div class="image"></div>
+      </div>
+    </section>
   </main>
   <script src="js/common.js"></script>
 </body>
