@@ -1,0 +1,102 @@
+header .topline .buttons .toggle-menu span, header .topline .buttons .toggle-menu span::after, header .topline .buttons .toggle-menu span::before {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #a19c9c;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+* {
+  margin: 0;
+  padding: 0; }
+  * .content {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+body {
+  font-family: Arial, sans-serif; }
+
+header {
+  border-bottom: 2px solid #FFDC4F; }
+  header .topline {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    header .topline img {
+      padding: 5px;
+      width: 60px;
+      height: auto; }
+    header .topline .notifications span {
+      margin-right: 7px;
+      font-weight: bold; }
+      header .topline .notifications span:nth-child(1) {
+        color: #29502E; }
+      header .topline .notifications span:nth-child(2) {
+        color: #605B5B;
+        text-decoration: underline; }
+      header .topline .notifications span:last-child {
+        color: #B81B21;
+        margin-right: 0; }
+    header .topline .buttons {
+      display: -webkit-flex;
+      display: -ms-flex; }
+      header .topline .buttons button {
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        font-size: 0;
+        background-color: transparent;
+        -webkit-background-size: contain;
+                background-size: contain;
+        border: none; }
+        header .topline .buttons button.shuffle {
+          background: url("../img/shuffle.png") no-repeat center;
+          -webkit-background-size: contain;
+                  background-size: contain; }
+        header .topline .buttons button.add-word {
+          background: url("../img/add-word.png") no-repeat center;
+          -webkit-background-size: contain;
+                  background-size: contain; }
+      header .topline .buttons .toggle-menu {
+        margin: 7px 0 0 5px;
+        width: 28px;
+        height: 16px; }
+        header .topline .buttons .toggle-menu span {
+          position: relative; }
+          header .topline .buttons .toggle-menu span::after, header .topline .buttons .toggle-menu span::before {
+            position: absolute;
+            content: "";
+            display: block; }
+          header .topline .buttons .toggle-menu span::after {
+            top: 7px; }
+          header .topline .buttons .toggle-menu span::before {
+            top: 14px; }
+        header .topline .buttons .toggle-menu.on span {
+          background-color: transparent; }
+          header .topline .buttons .toggle-menu.on span:before {
+            -webkit-transform: rotate(-45deg) translate(5px, -5px);
+                -ms-transform: rotate(-45deg) translate(5px, -5px);
+                    transform: rotate(-45deg) translate(5px, -5px); }
+          header .topline .buttons .toggle-menu.on span:after {
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg); }

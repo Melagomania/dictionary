@@ -1,0 +1,102 @@
+@import "colors", "placeholders"
+*
+  margin: 0
+  padding: 0
+
+  .content
+    max-width: 480px
+    width: 100%
+    margin: 0 auto
+
+.clearfix::after
+  content: ""
+  display: block
+  clear: both
+
+body
+  font-family: Arial, sans-serif
+
+
+header
+  border-bottom: 2px solid $header-border
+  .topline
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-around
+    align-items: center
+    img
+      padding: 5px
+      width: 60px
+      height: auto
+    .notifications
+      span
+        margin-right: 7px
+        font-weight: bold
+        &:nth-child(1)
+          color: $notification-green
+        &:nth-child(2)
+          color: $notification-gray
+          text-decoration: underline
+        &:last-child
+          color: $notification-red
+          margin-right: 0
+    .buttons
+      display: -webkit-flex
+      display: -ms-flex
+      button
+        width: 32px
+        height: 32px
+        margin-right: 12px
+        font-size: 0
+        background-color: transparent
+        background-size: contain
+        border: none
+        &.shuffle
+          background: url("../img/shuffle.png") no-repeat center
+          background-size: contain
+        &.add-word
+          background: url("../img/add-word.png") no-repeat center
+          background-size: contain
+      .toggle-menu
+        margin: 7px 0 0 5px
+        width: 28px
+        height: 16px
+        span
+          position: relative
+          @extend %span-base
+          &::after, &::before
+            @extend %span-base
+            position: absolute
+            content: ""
+            display: block
+          &::after
+            top: 7px
+          &::before
+            top: 14px
+        &.on span
+          background-color: transparent
+          &:before
+            transform: rotate(-45deg) translate(5px, -5px)
+          &:after
+            transform: rotate(45deg)
+
+        // background: url("../img/burger.png") no-repeat center
+        // background-size: contain
+
+
+
+  // .topline
+  //   padding: 8px 10px
+  //   a
+  //     float: left
+  //     img
+  //       width: 70px
+  //       height: auto
+  //   .notifications
+  //     width: 25%
+  //     margin: 0 auto
+  //     span
+  //       line-height: 100%
+  //   .buttons
+  //     float: right
