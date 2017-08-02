@@ -143,6 +143,8 @@ main .search-form {
     border: 1px solid #b3b0b0;
     -webkit-border-radius: 4px;
             border-radius: 4px; }
+    main .search-form input.full::after {
+      content: "asd"; }
   main .search-form button {
     position: relative;
     vertical-align: top;
