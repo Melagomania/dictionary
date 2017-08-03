@@ -14,7 +14,7 @@ header .topline .buttons .toggle-menu span, header .topline .buttons .toggle-men
   margin: 0;
   padding: 0; }
   * .content {
-    max-width: 480px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding: 5px 15px;
@@ -66,7 +66,8 @@ header {
       display: -ms-flex;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      margin-top: 8px; }
       header .topline .buttons button {
         width: 30px;
         height: 30px;
@@ -126,25 +127,25 @@ main .search {
   margin-bottom: 5px; }
 
 main .search-form {
+  position: relative;
+  width: 50%;
+  min-width: 180px;
   font-size: 0; }
   main .search-form label {
     line-height: 20px;
     position: relative;
     font-size: 14px;
     color: #b3b0b0; }
-  main .search-form input {
-    position: relative;
+  input {
     vertical-align: top;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    max-width: 180px;
-    padding: 4px 40px 4px 5px;
+    width: 86%;
+    padding: 4px 35px 4px 5px;
     line-height: 16px;
     border: 1px solid #b3b0b0;
-    -webkit-border-radius: 4px;
-            border-radius: 4px; }
-    main .search-form input.full::after {
-      content: "asd"; }
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
   main .search-form button {
     position: relative;
     vertical-align: top;
@@ -187,15 +188,16 @@ main .sort {
           align-items: flex-start;
   margin-bottom: 20px; }
   .words-list .item .word {
-    max-width: 210px; }
-    .words-list .item .word .eng {
+    width: 60%; }
+    .eng {
+      text-decoration: none;
       position: relative;
-      padding-right: 25px;
       font-size: 18px;
       color: #4c4c4c; }
-      .words-list .item .word .eng::after {
+      .eng::after {
+        pointer-events: none;
         position: absolute;
-        right: 2px;
+        right: -23px;
         top: 0;
         content: "";
         display: block;
@@ -212,8 +214,96 @@ main .sort {
       font-size: 15px;
       color: #c8c1c1; }
   .words-list .item .image {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     background: url("../img/onion.jpg") no-repeat center;
     -webkit-background-size: cover;
             background-size: cover; }
+
+.go-back {
+  margin-top: 10px; }
+  .go-back a {
+    position: relative;
+    padding: 3px 0 3px 21px;
+    font-size: 14px;
+    color: #b3b0b0;
+    text-decoration: none;
+    font-family: serif; }
+    .go-back a::before {
+      content: "";
+      display: block;
+      width: 19px;
+      height: 19px;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      background: url("../img/back-button.png") center no-repeat;
+      -webkit-background-size: cover;
+              background-size: cover; }
+  .go-back span {
+    vertical-align: super; }
+
+.add-word {
+  margin-bottom: 10px; }
+  .add-word .add-word-form {
+    margin-top: 10px; }
+    .add-word .add-word-form input {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 2px 5px; }
+    .add-word .add-word-form .buttons {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .add-word .add-word-form .buttons button {
+        margin-right: 10px;
+        padding: 10px 12px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #b3b0b0;
+        cursor: pointer; }
+        .add-word .add-word-form .buttons button:last-child {
+          margin-right: 0; }
+  .add-word .images img {
+    display: inline-block;
+    height: 130px;
+    width: auto; }
+
+.links {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 400px;
+  margin-bottom: 10px; }
+  .links a {
+    font-size: 14px;
+    color: #4c4c4c;
+    text-decoration: none; }
+
+.tags span {
+  margin-right: 4px;
+  font-size: 14px;
+  color: #777777; }
+
+@media only screen and (max-width: 480px) {
+  .add-word .images img {
+    height: 100px; }
+  input {
+    max-width: 180px; }
+  .words-list .item .image {
+    width: 90px;
+    height: 90px; } }

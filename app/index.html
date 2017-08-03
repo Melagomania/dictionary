@@ -4,63 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Dictionary</title>
+  <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class="topline content">
-      <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
-      <div class="notifications">
-        <span>104</span>
-        <span class="active-number">241</span>
-        <span>136</span>
-      </div>
+  <div class="go-back content">
+
+    <a href="index2.html">back to list</a>
+  </div>
+  <section class="add-word content">
+    <span class="eng">Shame</span>
+    <form action="#" method="POST" class="add-word-form">
+      <input type="text" name="translation" placeholder="Стыд">
+      <input type="text" name="description" placeholder="+ add description">
+      <input type="text" name="tags" placeholder="+ add #tags">
       <div class="buttons">
-        <button class="shuffle">Shuffle</button>
-        <button class="add-word">Add word</button>
-        <div class="toggle-menu">
-          <span></span>
-        </div>
+        <button>Save</button>
+        <button>Cancel</button>
       </div>
+    </form>
+    <div class="images">
+      <img src="img\shame.jpg" alt="img">
+      <img src="img\shame3.jpg" alt="">
+      <img src="img\shame2.jpg" alt="">
+      <img src="img\shame4.jpg" alt="">
+      <img src="img\shame2.jpg" alt="">
+      <img src="img\shame.jpg" alt="">
+      <img src="img\shame2.jpg" alt="">
+      <img src="img\shame4.jpg" alt="">
+      <img src="img\shame.jpg" alt="">
+      <img src="img\shame3.jpg" alt="">
     </div>
-
-  </header>
-
-  <main>
-    <div class="search content">
-      <form action="POST" class="search-form">
-        <label for="enter-word">
-          Enter the word or #tag:<br/>
-        </label>
-        <input type="text" name="word" id="enter-word">
-        <button type="submit">Find</button>
-      </form>
-      <div class="sort">
-        <span class="active-sort">name:</span>
-        <span>date</span>
-      </div>
+  </section>
+  <div class="content">
+    <div class="links">
+      <a href="#">Wiki</a>
+      <a href="#">Google</a>
+      <a href="#">Multitran</a>
+      <a href="#">Delete</a>
+      <a href="#">Edit</a>
     </div>
-    <section class="words-list content">
-      <div class="item">
-        <div class="word">
-          <span class="eng">Shame</span>
-          <p>Define shame: a feeling of guilt, regret or sadness that you</p>
-          <span class="translation">Стыд</span>
-        </div>
-        <div class="image"></div>
-      </div>
-      <div class="item">
-        <div class="word">
-          <span class="eng">Shame</span>
-          <p>Define shame: a feeling of guilt, regret or sadness that you</p>
-          <span class="translation">Стыд</span>
-        </div>
-        <div class="image"></div>
-      </div>
-    </section>
-  </main>
-
-  <script src="js/libs.min.js"></script>
-  <script src="js/common.js"></script>
+  </div>
+  <div class="tags content">
+    <span>tags:</span><span>#эмоции</span><span>#newgirl</span>
+  </div>
 </body>
 </html>
